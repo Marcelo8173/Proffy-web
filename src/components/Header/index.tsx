@@ -3,12 +3,12 @@ import './styles.css';
 import Logo from '../../assets/images/logo.svg';
 import BackIcon from '../../assets/images/icons/back.svg'
 import { Link } from 'react-router-dom';
-
+import './styles.css';
 interface HeaderProps{
     title: string;
 }
 
-const PageHeader:React.FC<HeaderProps> = ({title}) =>{
+const PageHeader:React.FC<HeaderProps> = ({title,children}) =>{
     return(
         <>
         <header className="page-header">
@@ -21,6 +21,7 @@ const PageHeader:React.FC<HeaderProps> = ({title}) =>{
 
             <div className="header-content">
                 <strong>{title}</strong>
+                {children}
             </div>
         </header>
     </>
