@@ -5,6 +5,7 @@ import LandingImg from '../../assets/images/landing.svg';
 import studyIcon from '../../assets/images/icons/study.svg';
 import giveClassesIcon from '../../assets/images/icons/give-classes.svg';
 import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg';
+import { Link } from 'react-router-dom';
 
 
 
@@ -18,14 +19,14 @@ const Landing:React.FC = () =>{
                 </div>
                 <img className="hero-image" src={LandingImg} alt="Plataforma de estudos"/>
                 <div className="buttons-container">
-                    <a href="" className="study">
+                    <Link to="aluno" className="study">
                         <img src={studyIcon} alt="estudar"/>
                         Estudar
-                    </a>
-                    <a href="" className="give-classes">
-                        <img src={giveClassesIcon} alt="Professor"/>
+                    </Link>
+                    <Link to="professor" className="give-classes">
+                        <img src={giveClassesIcon} alt="Sou Professor"/>
                         Sou Professor
-                    </a>
+                    </Link>
                     
                     
                 </div>
