@@ -6,9 +6,10 @@ import { Link } from 'react-router-dom';
 import './styles.css';
 interface HeaderProps{
     title: string;
+    description?:string;
 }
 
-const PageHeader:React.FC<HeaderProps> = ({title,children}) =>{
+const PageHeader:React.FC<HeaderProps> = ({title,children,description}) =>{
     return(
         <>
         <header className="page-header">
@@ -21,6 +22,7 @@ const PageHeader:React.FC<HeaderProps> = ({title,children}) =>{
 
             <div className="header-content">
                 <strong>{title}</strong>
+                {description && <p>{description}</p>}
                 {children}
             </div>
         </header>
